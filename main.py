@@ -39,7 +39,7 @@ def generate_report(book, word_count, data_dict) -> str:
     output += f'\n--- Begin report of {book} ---\n'
     output += f'{word_count} words found in the document\n\n'
 
-    # creates a list of tuples
+    # creates a list of tuples, sort by x[1] or count in reverse
     sorted_data = sorted(data_dict.items(), key=lambda x:x[1], reverse=True)
    
     for k, v in sorted_data:
